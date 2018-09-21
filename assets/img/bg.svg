@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="292" height="292" viewBox="0 0 292 292" version="1.1">
+    <title>Group</title>
+    <desc>Created using Figma</desc>
+    <g id="Canvas" transform="translate(-32279 -8205)">
+        <g id="Group">
+            <g id="Rectangle 2">
+                <use xlink:href="#path0_fill" transform="translate(32279 8205)" fill="transparent"/>
+            </g>
+            <g id="Rectangle">
+                <use xlink:href="#path1_fill" transform="matrix(0.777469 -0.628921 0.628921 0.777469 32414 8361.66)" fill="#DBE5FF" style="mix-blend-mode:darken"/>
+            </g>
+            <g id="Rectangle">
+                <use xlink:href="#path1_fill" transform="matrix(0.777469 -0.628921 0.628921 0.777469 32458 8452.66)" fill="#DBE5FF" style="mix-blend-mode:darken"/>
+            </g>
+            <g id="Rectangle">
+                <use xlink:href="#path1_fill" transform="matrix(0.927207 -0.37455 0.37455 0.927207 32322 8329.37)" fill="#DBE5FF" style="mix-blend-mode:darken"/>
+            </g>
+            <g id="Rectangle">
+                <use xlink:href="#path1_fill" transform="matrix(0.927207 -0.37455 0.37455 0.927207 32531 8301.37)" fill="#DBE5FF" style="mix-blend-mode:darken"/>
+            </g>
+            <g id="Rectangle">
+                <use xlink:href="#path1_fill" transform="matrix(0.584103 -0.81168 0.81168 0.584103 32350 8236.3)" fill="#DBE5FF" style="mix-blend-mode:darken"/>
+            </g>
+            <g id="Rectangle">
+                <use xlink:href="#path1_fill" transform="matrix(0.584103 -0.81168 0.81168 0.584103 32312 8453.3)" fill="#DBE5FF" style="mix-blend-mode:darken"/>
+            </g>
+            <g id="Rectangle">
+                <use xlink:href="#path1_fill" transform="matrix(0.584103 -0.81168 0.81168 0.584103 32526.4 8426.25)" fill="#DBE5FF" style="mix-blend-mode:darken"/>
+            </g>
+            <g id="Rectangle">
+                <use xlink:href="#path1_fill" transform="matrix(0.584103 -0.81168 0.81168 0.584103 32446 8247.3)" fill="#DBE5FF" style="mix-blend-mode:darken"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <path id="path0_fill" d="M 0 0L 292 0L 292 292L 0 292L 0 0Z"/>
+        <path id="path1_fill" d="M 0 0L 9 0L 9 18L 0 18L 0 0Z"/>
+    </defs>
+</svg>

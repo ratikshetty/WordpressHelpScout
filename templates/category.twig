@@ -1,0 +1,62 @@
+
+
+{#<div class="p-all-25 bg-color bg-white table-bordered shadow--effect clr-black--translucent" style="border-color: silver">#}
+
+        {#<h2 class="p-b-20">Categories</h2>#}
+        {#<ul>#}
+            {#{% for post in posts %}#}
+            {#{% for term in post.terms('category') %}#}
+                {#<li>#}
+
+                {#<p><a href="{{ term.link }}">{{ term.name }}</a> </p>#}
+                {#</li>#}
+            {#{% endfor %}#}
+            {#{% endfor %}#}
+            {#{% for category in categories %}#}
+
+                    {#<li>#}
+
+                        {#<p><a href={{ category['link'] }} >{{ category['name'] }}</a> </p>#}
+                    {#</li>#}
+
+            {#{% endfor %}#}
+
+        {#</ul>#}
+    {#</div>#}
+
+
+
+
+
+
+            {% for category in categories %}
+                <div class="row ">
+                    <div class="col-md-12 p-t-10">
+
+                        <div class="row bg-color bg-white table-bordered shadow--effect clr-black--translucent" style="border-color: silver" onclick="window.location='{{ function('get_category_link',category.term_id) }}'">
+                            <div class="col-md-4 m-auto text-center">
+                                <img src="https://png.icons8.com/ios/96/3498db/news.png">
+                            </div>
+
+                            <div class="col-md-8 ">
+
+                                <div class="p-t-10 m-auto">
+                                    <div class=" p-all-25" >
+
+                                        <h3 class=""><a href={{ function('get_category_link',category.term_id) }} >{{ category.cat_name }}</a> </h3>
+                                        <p class="p-t-10">{{ category.count }} posts in this category.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            {% endfor %}
+
+
+

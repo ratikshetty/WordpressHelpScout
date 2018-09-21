@@ -1,0 +1,72 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<header class="home-header">
+		<div class="container-900">
+			<div class="row  ">
+				<div class="col-md-12 m-auto">
+					<div class="p-t-80 p-b-80">
+						<div>
+                            <h3 class="clr-white"><a href="http://localhost/wordpress/">{{site.name}}</a></h3>
+                            <h6 class="clr-white opacity--75">{{site.description}}</h6>
+
+						</div>
+						<div class="header-search-box ">
+
+								<input  id="search" type="text" class="header-search-input shadow-sm" placeholder="type something " onchange="test()" >
+
+								<span class="header-search-book btn-search">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" color="currentColor" data-reactid="1001"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+								</span>
+							</form>
+						</div>
+						<h6 class="clr-white opacity--75 p-t-30">{{ function('the_breadcrumb') }}</h6>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="content-wrapper   bg-smoke--d clr-black--translucent">
+        <div class="flex  p-t-90 p-b-90">
+        <div class=" col-md-8 m-auto bg-white table-bordered shadow--effect" style="border-color: silver">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			{#<img src="{{ post.thumbnail.src }}">#}
+			<section class="article-content container p-all-25">
+
+                <h1 class="article-h1 clr-black--translucent">{{ post.title }}</h1>
+                <p class="blog-author">
+                    <span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.date }}
+                </p>
+				<div class="article-body">
+					{{post.content}}
+                    {{ function('get_simple_likes_button',post.ID) }}
+				</div>
+			</section>
+
+			{#<!-- comment box -->#}
+			{#<section class="comment-box flex p-t-30">#}
+				{#<div class="col-md-10 m-auto">#}
+				{#<!-- comments -->#}
+				{#<div class="comments">#}
+				    {#{% if post.comments %}#}
+					{#<h3> Comments: </h3>#}
+					{#{% for cmt in post.comments %}#}
+					    {#{% include "comment.twig" with {comment:cmt} %}#}
+					{#{% endfor %}#}
+				    {#{% endif %}#}
+				{#</div>#}
+
+				{#{% if post.comment_status == "closed" %}#}
+					{#<p> comments for this post are closed </p>#}
+				{#{% else %}#}
+				    {#<!-- comment form -->#}
+				    {#{% include "comment-form.twig" %}#}
+				{#{% endif %}#}
+				{#</div>#}
+			{#</section>#}
+		</article>
+        </div>
+        </div>
+	</div><!-- /content-wrapper -->
+{% endblock %}

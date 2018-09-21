@@ -1,0 +1,11 @@
+
+
+    <div class="p-all-25 bg-color bg-white table-bordered shadow--effect clr-black--translucent" style="border-color: silver">
+
+    <h2 class="p-b-20">Recently Added</h2>
+    <ul>
+        {% for post in posts %}
+            <li> <p class=" text-md"><a href="{{post.link}}">{{post.title}}</a></p></li>
+        {% endfor %}
+    </ul>
+</div>

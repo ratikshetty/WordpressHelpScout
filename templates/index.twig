@@ -1,0 +1,87 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<header class="home-header">
+		<div class="container-900">
+			<div class="row  ">
+				<div class="col-md-12 m-auto">
+					<div class="p-t-80 p-b-80 ">
+						<div>
+
+							<h3 class="clr-white"><a href={{ site.home_url }}>{{site.name}}</a></h3>
+							<h6 class="clr-white opacity--75">{{site.description}}</h6>
+
+
+
+						</div>
+						<div class="header-search-box ">
+                            <form action="">
+
+								<input  id="search" type="text" class="header-search-input shadow-sm" placeholder="type something "  >
+
+								<span class="header-search-book btn-search">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" color="currentColor" data-reactid="1001"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+								</span>
+
+
+                            </form>
+
+
+
+
+						</div>
+						<h6 class="clr-white opacity--75 p-t-30">{{ function('the_breadcrumb') }}</h6>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="p-t-80 p-b-80 bg-smoke--d">
+
+        {% if home %}
+
+        <div class="col-md-6 m-auto p-t-30  ">
+
+            <h2 class="p-b-20 clr-black--translucent">Categories</h2>
+            {% include ['category.twig'] %}
+        </div>
+        {% else %}
+            {% for post in posts %}
+
+                {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+
+            {% endfor %}
+        {% endif %}
+
+
+
+
+	</section>
+
+{#<section class=" p-b-80 bg-smoke--d">#}
+	{#<div class="col-md-4 m-auto p-t-30 inline ">#}
+
+        {#{% include ['recent.twig'] %}#}
+	{#</div>#}
+
+	{#<div class="col-md-4 m-auto p-t-30 inline ">#}
+    	{#{% include ['category.twig'] %}#}
+	{#</div>#}
+
+
+
+
+
+{#</section>#}
+
+	<p></p>
+
+    {#<aside class="sidebar">#}
+        {#{{sidebar}}#}
+    {#</aside>#}
+
+
+
+
+{% endblock %}
